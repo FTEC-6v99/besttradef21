@@ -19,7 +19,7 @@ def get_cnx() -> MySQLConnection:
     Investor DAO functions
 '''
 
-def get_all_investor() -> list[Investor]:
+def get_all_investor() -> t.List[Investor]:
     '''
         Get list of all investors [R]
     '''
@@ -49,7 +49,7 @@ def get_investor_by_id(id: int) -> t.Optional[Investor]:
         investor = Investor(row['name'], row['status'], row['id'])
         return investor 
 
-def get_investors_by_name(name: str) -> list[Investor]:
+def get_investors_by_name(name: str) -> t.List[Investor]:
     '''
         Return a list of investors for a given name [R]
     '''
@@ -115,7 +115,7 @@ def update_investor_status(id: int, status: str) -> None:
 '''
     Account DAO functions
 '''
-def get_all_accounts() -> list[Account]:
+def get_all_accounts() -> t.List[Account]:
     # Code goes here
     pass
 
@@ -123,7 +123,7 @@ def get_account_by_id(id: int) -> Account:
     # Code goes here
     pass
 
-def get_accounts_by_investor_id(id: int) -> list[Account]:
+def get_accounts_by_investor_id(id: int) -> t.List[Account]:
     # Code goes here
     pass
 
@@ -142,15 +142,15 @@ def create_account(account: Account) -> None:
 '''
     Portfolio DAO functions
 '''
-def get_all_portfolios() -> list[Portfolio]:
+def get_all_portfolios() -> t.List[Portfolio]:
     # code goes here
     pass
 
-def get_porfolios_by_acct_id(acct_id: int) -> list[Portfolio]:
+def get_porfolios_by_acct_id(acct_id: int) -> t.List[Portfolio]:
     # code goes here
     pass
 
-def get_portfolios_by_investor_id(investor_id: int) -> list[Portfolio]:
+def get_portfolios_by_investor_id(investor_id: int) -> t.List[Portfolio]:
     # code goes here
     pass
 
